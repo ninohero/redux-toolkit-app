@@ -93,7 +93,7 @@ const AddQuestionButton = styled.button``;
 const Questions = () => {
   const [showAddQuestion, setShowAddQuestion] = useState(false);
 
-  const [title, setTiitle] = useState("");
+  const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const questions = useSelector(selectQuestions);
   const dispatch = useDispatch();
@@ -129,9 +129,9 @@ const Questions = () => {
         <FormContainer>
           <FormContainerDiv>
             <FormLabel>Title</FormLabel>
-            <FormContainerDiv
+            <FormContainerTitleInput
               type="text"
-              onChange={(e) => SVGFEDistantLightElement(e.target.valuer)}
+              onChange={(e) => setTitle(e.target.valuer)}
               value={title}
             />
           </FormContainerDiv>
